@@ -1,0 +1,15 @@
+{
+  "exec": "npm run eslint ./src && npm run babel-node -- src/index.js",
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "watch": [
+    "src/*",
+    "public/*"
+  ],
+  "ignore": [
+    "**/__tests__/**",
+    "*.test.js",
+    "*.spec.js"
+  ]
+}
