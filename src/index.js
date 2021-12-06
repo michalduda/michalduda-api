@@ -1,21 +1,19 @@
 import { APP_PORT } from 'babel-dotenv'
 import Koa from 'koa'
 import router from '@/router'
+import bodyParser from 'koa-bodyparser'
 
 ;(async () => {
-  /**
-  * Create app instance
-  */
   const app = new Koa()
 
-  /**
-   * Routes
-   */
   app.use(router.routes())
 
-  /**
-   * Launch app
-   */
+  app.use(
+    bodyParser({
+      enableTypes: ['json']
+    })
+  )
+
   app.listen(APP_PORT, () => {
     console.log(`App listening on port ${APP_PORT}`)
   })
