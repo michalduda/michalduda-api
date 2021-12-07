@@ -1,3 +1,5 @@
+const isProd = process.env.NODE_ENV === 'production'
+
 module.exports = {
   env: {
     es2021: true,
@@ -12,5 +14,6 @@ module.exports = {
     parser: '@babel/eslint-parser'
   },
   rules: {
+    'no-debugger': isProd ? 'warn' : 'off'
   }
 }
