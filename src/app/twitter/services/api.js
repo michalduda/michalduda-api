@@ -1,5 +1,5 @@
-import axios from 'axios'
 import { TWITTER_BEARER_TOKEN, TWITTER_API_URL } from 'babel-dotenv'
+import axios from 'axios'
 
 class Api {
   constructor () {
